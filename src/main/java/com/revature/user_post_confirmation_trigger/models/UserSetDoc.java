@@ -12,14 +12,13 @@ import java.util.List;
 public class UserSetDoc {
 
     private String id;
-    private String set_name;
+    private String setName;
     private List<Tag> tags;
     private String author;
-    private boolean is_public;
+    private boolean isPublic;
     private int views;
     private int plays;
     private int studies;
     private int favorites;
-
 
 }

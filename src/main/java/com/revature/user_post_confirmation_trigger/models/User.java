@@ -14,14 +14,14 @@ public class User {
 
     private String id;
     private String username;
-    private String profile_picture;
+    private String profilePicture;
     private int points;
     private int wins;
     private int losses;
-    private String registration_date;
+    private String registrationDate;
     private List<String> gameRecords = new ArrayList<>();
-    private List<UserSetDoc> created_sets = new ArrayList<>();
-    private List<UserSetDoc> favorite_sets = new ArrayList<>();
+    private List<UserSetDoc> createdSets = new ArrayList<>();
+    private List<UserSetDoc> favoriteSets = new ArrayList<>();
 
     @DynamoDbPartitionKey
     public String getId() {
@@ -32,14 +32,14 @@ public class User {
     public User(String id, String username){
         this.id = id;
         this.username = username;
-        this.profile_picture = "";
+        this.profilePicture = "";
         this.points = 0;
         this.wins = 0;
         this.losses = 0;
-        this.registration_date = LocalDateTime.now().toString();
+        this.registrationDate = LocalDateTime.now().toString();
         this.gameRecords = new ArrayList<>();
-        this.created_sets = new ArrayList<>();
-        this.favorite_sets = new ArrayList<>();
+        this.createdSets = new ArrayList<>();
+        this.favoriteSets = new ArrayList<>();
     }
 
     public User(){
